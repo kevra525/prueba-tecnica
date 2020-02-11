@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function palindromo(){
+            revString = "";
+            inpString = document.getElementById("palabra").value;
+            i = inpString.length;
+
+            for(var j=1 ; j>=0; j--){
+                revString = revString + inpString.charAt(j);
+                //document.write(revString+"<br>");
+            }
+
+            if(inpString === revString){
+                alert(inpString+"es un palindromo");
+
+            }else{
+                alert(inpString+"no es palindromo")
+            }
+        }
+
+        
+    </script>
+</head>
+<body>
+    ingrese palabra: <input type="text" id="palabra">
+    <input type="submit" value="verifica" onclick="palindromo()">
+</body>
+</html>
